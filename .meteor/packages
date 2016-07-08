@@ -1,0 +1,24 @@
+# Meteor packages used by this project, one per line.
+# Check this file (and the other files in this directory) into your repository.
+#
+# 'meteor add' and 'meteor remove' will edit this file for you,
+# but you can also edit it by hand.
+
+meteor-platform
+reywood:bootstrap3-sass
+ian:accounts-ui-bootstrap-3
+meteorhacks:flow-router
+meteorhacks:flow-layout
+arillo:flow-router-helpers
+fourseven:scss
+accounts-google
+accounts-password
+meteorhacks:fast-render
+msavin:mongol
+aldeed:autoform
+aldeed:simple-schema
+fortawesome:fontawesome
+aldeed:collection2
+dburles:collection-helpers
+jparker:gravatar
+service-configuration

@@ -1,0 +1,38 @@
+<template name="Polls">
+  {{#pollHeader}}
+    {{#if isActivePath regex='/$'}}
+      Active Polls
+    {{else}}
+      Your Polls
+    {{/if}}
+  {{/pollHeader}}
+  <ul class="list-group">
+    {{#each polls}}
+      {{> PollItem}}
+    {{else}}
+      <p>No polls found.</p>
+    {{/each}}
+  </ul>
+</template>
+
+<template name="PollItem">
+  <li class="list-group-item poll-item">
+    <img class="avatar" src="{{gravatar}}">
+    <h2>{{title}}</h2>
+    <div class="action-buttons">
+      {{#if owner}}
+        <a href="#">
+          <button type="button" class="btn btn-danger btn-md">
+            <i class="fa fa-trash-o fa-lg"></i>
+          </button>
+        </a>
+      {{/if}}
+
+      <a href="{{pathFor 'poll' id=_id}}">
+        <button type="button" class="btn btn-success btn-md">
+          <i class="fa fa-eye fa-lg"></i> View
+        </button>
+      </a>
+    </div>
+  </li>
+</template>
